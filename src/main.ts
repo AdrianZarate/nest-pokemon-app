@@ -8,6 +8,11 @@ async function bootstrap() {
     new ValidationPipe({
       whitelist: true,
       forbidNonWhitelisted: true,
+      transform: true, // Automatically transform payloads to DTO instances
+      transformOptions: {
+        // Enable implicit type conversion
+        enableImplicitConversion: true, // Allow primitive types to be converted
+      },
     }),
   );
   app.setGlobalPrefix('api/v2');
