@@ -15,7 +15,7 @@ async function bootstrap() {
       },
     }),
   );
-  app.setGlobalPrefix('api/v2');
+  app.setGlobalPrefix('api/v2'); // Set a global prefix for all routes
 
   await app.listen(process.env.PORT ?? 3000);
   console.log('App running on port', process.env.PORT ?? 3000);

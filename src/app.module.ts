@@ -11,6 +11,7 @@ import { joiValidationSchema } from './config/joi.validation';
 @Module({
   imports: [
     ConfigModule.forRoot({
+      // es para las variables de entorno
       // SIEMPRE AL INICIO
       load: [envConfig],
       validationSchema: joiValidationSchema,
